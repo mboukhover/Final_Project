@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Drawing on the Web</title>
+
+    <style>
+
+    @import url('https://fonts.googleapis.com/css?family=Chivo');
+
+    body {
+      background: #cfdad2;
+      margin: 0;
+    }
+
+    #container {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      z-index: 200;
+    }
+
+    img.canal {
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      z-index: 200;
+    }
+
+    img.pink_building {
+      position: fixed;
+      z-index: 150;
+      width: 30%;
+      left: 200px;
+      mix-blend-mode: hue;
+    }
+
+    img.paris_building {
+      position: fixed;
+      z-index: 150;
+      width: 30%;
+      left: 500px;
+    }
+
+
+    video {
+      display: none;
+    }
+
+    canvas {
+        z-index: 100;
+        position: absolute;
+        top: 70%;
+        margin-top: -150px;
+        opacity: 70%;
+        mix-blend-mode: difference;
+    }
+    </style>
+  </head>
+
+  <body>
+
+  <div id="container">
+    <img class="canal" src="canal.png" alt="canal">
+    <img class="pink_building" src="pink_building.png" alt="pink building">
+    <img class="paris_building" src="paris_building.png" alt="paris building">
+
+  <video src="pool.mp4" autoplay loop></video>
+
+    <canvas id="drawing" width="800" height="500">
+      <p>This browser doesn’t support the HTML canvas</p>
+    </canvas>
+  </div>
+
+  <script src="drawing_03.js"> </script>
+  </body>
+</html>

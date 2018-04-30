@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Final Project Interface</title>
+
+    <style>
+      #container {
+        width: 1040px;
+        margin: auto;
+        margin-top: 100px;
+      }
+
+      img {
+        margin: 20px;
+
+      }
+
+      img:hover {
+        transform: scale(1.1, 1.1) skewX(-2deg);
+        transition: transform 0.5s;
+      }
+
+      .opaque {
+        opacity: 1;
+        transition: opacity 0.5s;
+      }
+
+      .semitransparent {
+        opacity: 0.5;
+        transform: scale(0.98, 0.98) skewX(-2deg);
+        transition: opacity 0.5s, transform .5s;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="container">
+      <img class="opaque" src="placeholder.png" >
+      <img class="opaque" src="placeholder.png" >
+      <img class="opaque" src="placeholder.png" >
+    </div>
+
+    <script src="interface.js"></script>
+  </body>
+</html>
