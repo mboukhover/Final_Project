@@ -1,0 +1,55 @@
+img.sofi_bg {
+  position: fixed;
+  left: 5%;
+  top: 10%;
+  width: 30%;
+}
+
+img.sofi {
+  position: fixed;
+  left: 10%;
+  top: 15%;
+  width: 30%;
+}
+
+img.tako_bg {
+  position: fixed;
+  left: 60%;
+  top: 10%;
+  width: 30%;
+}
+
+img.tako {
+  position: fixed;
+  left: 55%;
+  top: 13%;
+  width: 28%;
+}
+
+img.brit_bg {
+  position: fixed;
+  left: 3%;
+  top: 52%;
+  width: 30%;
+}
+
+img.brit{
+  position: fixed;
+  left: 7%;
+  top: 57%;
+  width: 35%;
+}
+
+img.ashley {
+  position: fixed;
+  left: 55%;
+  top: 60%;
+  width: 35%;
+}
+
+img.ashley_bg {
+  position: fixed;
+  left: 50%;
+  top: 55%;
+  width: 38%;
+}

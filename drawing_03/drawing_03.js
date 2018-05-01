@@ -1,8 +1,8 @@
 const canvas = document.getElementById('drawing');
 const context = canvas.getContext('2d');
 
-var referenceWidth = 1200;
-var referenceHeight = 400;
+var referenceWidth = 1500;
+var referenceHeight = 500;
 var pixelScale = window.devicePixelRatio;
 
 var video = document.querySelector('video');
@@ -26,7 +26,7 @@ function setup() {
 function draw() {
   var imgScale = 10;
 
-  context.drawImage(video, 0, 0, 1200 / (imgScale * pixelScale), 400 / (imgScale * pixelScale));
+  context.drawImage(video, 0, 0, 1500 / (imgScale * pixelScale), 500 / (imgScale * pixelScale));
 
   var imageData = context.getImageData(0, 0, referenceWidth/imgScale, referenceHeight/imgScale);
   var data = imageData.data;
@@ -41,22 +41,26 @@ function draw() {
       var r = data[index + 0]; // red
       var g = data[index + 1]; // green
       var b = data[index + 2]; // blue
-      var a = data[index + 3]; // alpha
 
       var bright = (r+g+b)/3
-      console.log(bright)
+      //console.log(bright)
 
-      if (bright <= 100){
-        context.fillStyle = 'rgba(210, 217, 209, .5)';
+      if (bright <= 130){
+        context.fillStyle = 'rgba(210, 217, 209, .4)'; //lightest green
         }
 
-      else if (bright > 101 && bright <= 120){
-        context.fillStyle = 'rgba(181, 190, 181, .5)';
+      else if (bright >= 131 && bright <= 144){
+        context.fillStyle = 'rgba(181, 190, 181, .4)'; //darker green
         }
 
-      else if (bright > 121){
-        context.fillStyle = 'rgba(116, 134, 142, .5)';
+      else if (bright >= 145 && bright <= 160){
+        context.fillStyle = 'rgba(130, 190, 204, .4)';  //darker blue green
         }
+
+      else {
+        context.fillStyle = 'rgba(230, 190, 204, .4)'; //light pink
+        }
+
 
       context.save(); // optional
       context.translate(imgScale/2, imgScale/2); // optional
@@ -66,8 +70,6 @@ function draw() {
       context.restore();
     }
   }
-
-  context.putImageData(imageData, 0, 0);
 
   requestAnimationFrame(draw);
 }

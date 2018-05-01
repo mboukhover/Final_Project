@@ -3,43 +3,30 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Final Project Interface</title>
+    <title>Spatial_or_Spacial</title>
 
-    <style>
-      #container {
-        width: 1040px;
-        margin: auto;
-        margin-top: 100px;
-      }
+    <link rel="stylesheet" href="interface.css">
 
-      img {
-        margin: 20px;
 
-      }
-
-      img:hover {
-        transform: scale(1.1, 1.1) skewX(-2deg);
-        transition: transform 0.5s;
-      }
-
-      .opaque {
-        opacity: 1;
-        transition: opacity 0.5s;
-      }
-
-      .semitransparent {
-        opacity: 0.5;
-        transform: scale(0.98, 0.98) skewX(-2deg);
-        transition: opacity 0.5s, transform .5s;
-      }
-    </style>
   </head>
 
   <body>
+
+    <img id="disposable" src="assets/disposable.png">
+
     <div id="container">
-      <img class="opaque" src="placeholder.png" >
-      <img class="opaque" src="placeholder.png" >
-      <img class="opaque" src="placeholder.png" >
+      <a href="../drawing_01/drawing_01.html">
+        <img class="standard" src="assets/drawing_01.png" >
+      </a>
+
+      <a href="../drawing_02/drawing_02.html">
+        <img class="standard" src="assets/drawing_02.png" >
+      </a>
+
+      <a href="../drawing_03/drawing_03.html">
+        <img class="standard" src="assets/drawing_03.png" >
+      </a>
+
     </div>
 
     <script src="interface.js"></script>

@@ -1,0 +1,53 @@
+body {
+  background: #fdeceb;
+  margin: 0;
+}
+
+#container {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  z-index: 200;
+  background-color: #eeb2b0;
+}
+
+img.canal {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 200;
+}
+
+img.pink_building {
+  position: absolute;
+  z-index: 150;
+  width: 30%;
+  margin-left: 10%;
+}
+
+img.paris_building {
+  position: absolute;
+  z-index: 150;
+  width: 30%;
+  margin-left: 70%;
+  top: 0px;
+}
+
+img.swamp {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  margin-top: 20%;
+}
+
+video {
+  display: none;
+}
+
+canvas {
+    z-index: 100;
+    position: absolute;
+    margin-top: -150px;
+  }

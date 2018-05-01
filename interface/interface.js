@@ -4,9 +4,9 @@ const images = document.querySelectorAll('img');
 function changeOpacity(event) {
   if (event.target.tagName == 'IMG') {
     for (var i = 0; i < images.length; i++) {
-      images[i].className = 'semitransparent';
+      images[i].className = 'skewed';
     }
-    event.target.className = "opaque";
+    event.target.className = "standard";
     event.target.addEventListener('mouseout', resetOpacity);
   }
   event.stopPropagation();
@@ -14,7 +14,7 @@ function changeOpacity(event) {
 
 function resetOpacity() {
   for (var i = 0; i < images.length; i++) {
-    images[i].className = 'opaque';
+    images[i].className = 'standard';
   }
 }
 

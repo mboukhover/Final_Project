@@ -1,4 +1,4 @@
-const canvas = document.getElementById('gradient');
+const canvas = document.getElementById('noise');
 const context = canvas.getContext('2d');
 
 var referenceWidth;
@@ -40,7 +40,6 @@ function draw() {
 
   context.putImageData(pixels, 0, 0);
 
-  // pure RGB static
   requestAnimationFrame(draw);
 }
 

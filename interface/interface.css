@@ -1,0 +1,51 @@
+body {
+  background: linear-gradient(-45deg, #4E598C, #F7C59F, #B18FCF, #EDAFB8);
+  background-size: 400% 400%;
+  animation: Gradient 15s ease infinite;
+}
+
+#container {
+  width: 1040px;
+  margin: auto;
+  margin-top: 100px;
+}
+
+img {
+  margin: 20px;
+
+}
+
+img:hover {
+  transform: scale(1.1, 1.1) skewX(-2deg);
+  transition: transform 0.5s;
+}
+
+.standard {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.skewed {
+  opacity: 0.5;
+  transform: scale(0.98, 0.98) skewX(-2deg);
+  transition: opacity 0.5s, transform .5s;
+}
+
+#disposable {
+  position: fixed;
+  width: 30%;
+  margin-top: 20%;
+  margin-left: 70%;
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}

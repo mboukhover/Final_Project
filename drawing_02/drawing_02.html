@@ -3,78 +3,21 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Drawing on the Web</title>
+    <title>Drawing_02</title>
 
-    <style>
 
-    @import url('https://fonts.googleapis.com/css?family=Chivo');
-
-    body {
-
-      background: linear-gradient(-45deg, #4E598C, #F7C59F, #B18FCF, #EDAFB8);
-	    background-size: 400% 400%;
-	    animation: Gradient 15s ease infinite;
-
-    }
-
-    marquee{
-      font-family: 'Chivo', sans-serif;
-      color: black;
-      font-size: 20px;
-      position: absolute;
-      padding-left: 50%;
-      width: 100px;
-      z-index: 100;
-      }
-
-    marquee.right{
-      padding-top: 30%;
-    }
-
-    marquee.left{
-      padding-top: 35%;
-    }
-
-    #container {
-      height: 100%;
-      width: 100%;
-      margin: 0;
-      padding: 0;
-    }
-
-    img.tunnel {
-      position: fixed;
-      height: 100%;
-      width: 100%;
-      z-index: 200;
-      /* opacity: .1; */
-
-    }
-
-    @keyframes Gradient {
-    	0% {
-    		background-position: 0% 50%
-    	}
-    	50% {
-    		background-position: 100% 50%
-    	}
-    	100% {
-    		background-position: 0% 50%
-    	}
-    }
-
-    </style>
   </head>
 
   <body>
 
   <div id="container">
 
-    <img class="tunnel" src="tunnel.png" alt="tunnel">
-
-    <marquee class="left" behavior="scroll" direction="left"> need you for the old me. need you for my sanity. </marquee>
-    <marquee class="right" behavior="scroll" direction="right"> need you for the old me. need you for my sanity. </marquee>
+    <img id="tunnel" src="assets/tunnel.png" alt="tunnel">
+    <video id="train" src="assets/train.mp4" autoplay loop muted></video>
+    <canvas id="c1" width="600" height="400"></canvas>
 
   </div>
+
+  <script src="drawing_02.js"> </script>
   </body>
 </html>
